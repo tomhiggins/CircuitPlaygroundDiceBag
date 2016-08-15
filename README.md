@@ -6,7 +6,14 @@ roll dice of serveral type, d100, d20, d12 or d6.
 An optional custom 3in button was created to mount the CP on. The test unit uses a 150mah lipo 
 (https://www.adafruit.com/products/1317) mounted on the back side of the button. 
 
-<b>User Manual:</b><br>
+<b>Features</b>
+<li> Can roll d100, d20, d12,or d6
+<li> Hold button down and hear the bones rolling
+<li> NeoPixels will brighten or dim based on surrounding light level
+<li> Will not roll off table 
+<li> Does not cheat
+<br>
+<b>User Manual</b><br>
 Select the type of die you would like to throw by putting the Select Switch in the proper position 
 and then  pressing the proper Button
 
