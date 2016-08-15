@@ -2,7 +2,7 @@
 <i>CC Attribution-ShareAlike 4.0 International Tom Higgins & Sons </i>
 
 Dice Bag uses Adafruit's Circuit Playground (https://www.adafruit.com/products/3000) to
-roll dice of serveral type, d100, d20, d12 or d6. 
+roll dice of several type, d100, d20, d12 or d6. 
 An optional custom 3in button was created to mount the CP on. The test unit uses a 150mah lipo 
 (https://www.adafruit.com/products/1317) mounted on the back side of the button. 
 
