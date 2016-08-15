@@ -12,7 +12,7 @@ An optional custom 3in button was created to mount the CP on. The test unit uses
 <li> NeoPixels will brighten or dim based on surrounding light level
 <li> Will not roll off table 
 <li> Does not cheat
-<br>
+<br><br>
 <b>User Manual</b><br>
 Select the type of die you would like to throw by putting the Select Switch in the proper position 
 and then  pressing the proper Button
@@ -20,7 +20,7 @@ and then  pressing the proper Button
 <b>Select Switch</b>  +    Left Button d100 (0-99)       Right Button d20 (1-20)  
 <b>Select Switch</b>  -    Left Button  d12 (1-12)       Right Button d06 (1-6)  
 
-You can hold down the Button and it will flash through many tosses.
+You can hold down the Button for as long as you want. Dance to the sound of the bones rolling. 
 
 Release the Button and your results will show on the Circuit Playground as two (or one) lit NeoPixels
 
