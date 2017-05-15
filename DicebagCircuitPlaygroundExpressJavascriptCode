@@ -1,0 +1,58 @@
+let troll = 0
+let tens = 0
+let ones = 0
+let switcher = 0
+loops.forever(() => {
+    music.stopAllSounds()
+    if (input.buttonA.isPressed()) {
+        if (switcher) {
+            troll = tossd12(0)
+        } else {
+            troll = tossd100(0)
+        }
+    } else {
+        if (input.buttonB.isPressed()) {
+            if (switcher) {
+                troll = tossd6(0)
+            } else {
+                troll = tossd20(0)
+            }
+        }
+    }
+    ones = troll % 10
+    tens = troll / 10
+    showtoss(ones, tens)
+})
+input.onSwitchMoved(SwitchDirection.Left, () => {
+    switcher = 0
+})
+input.onSwitchMoved(SwitchDirection.Right, () => {
+    switcher = 1
+})
+function tossd100(troll: number) {
+    return Math.random(99)
+}
+function tossd20(troll: number) {
+    return Math.random(19) + 1
+}
+function tossd12(troll: number) {
+    return Math.random(11) + 1
+}
+function tossd6(troll: number) {
+    return Math.random(5) + 1
+}
+function showtoss(ones: number, tens: number) {
+    light.pixels.clear()
+    music.playTone((ones * 100) + 1, 50)
+    music.stopAllSounds()
+    if (ones == tens) {
+        light.pixels.setPixelColor(tens, Colors.Green)
+    }
+    else {
+        light.pixels.setPixelColor(ones, Colors.Blue)
+        light.pixels.setPixelColor(tens, Colors.Red)
+    }
+    light.pixels.show()
+    music.stopAllSounds()
+    return
+}
