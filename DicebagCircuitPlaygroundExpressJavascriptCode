@@ -6,22 +6,19 @@ loops.forever(() => {
     music.stopAllSounds()
     if (input.buttonA.isPressed()) {
         if (switcher) {
-            troll = tossd12(0)
+            tossd12()
         } else {
-            troll = tossd100(0)
+            tossd100()
         }
     } else {
         if (input.buttonB.isPressed()) {
             if (switcher) {
-                troll = tossd6(0)
+                tossd6()
             } else {
-                troll = tossd20(0)
+                tossd20()
             }
         }
     }
-    ones = troll % 10
-    tens = troll / 10
-    showtoss(ones, tens)
 })
 input.onSwitchMoved(SwitchDirection.Left, () => {
     switcher = 0
@@ -29,17 +26,25 @@ input.onSwitchMoved(SwitchDirection.Left, () => {
 input.onSwitchMoved(SwitchDirection.Right, () => {
     switcher = 1
 })
-function tossd100(troll: number) {
-    return Math.random(99)
+function tossd100() {
+    troll = Math.random(99)
+    prepthrow(troll)
+    return
 }
-function tossd20(troll: number) {
-    return Math.random(19) + 1
+function tossd20() {
+    troll = Math.random(19) + 1
+    prepthrow(troll)
+    return
 }
-function tossd12(troll: number) {
-    return Math.random(11) + 1
+function tossd12() {
+    troll = Math.random(11) + 1
+    prepthrow(troll)
+    return
 }
-function tossd6(troll: number) {
-    return Math.random(5) + 1
+function tossd6() {
+    troll = Math.random(6) + 1
+    prepthrow(troll)
+    return
 }
 function showtoss(ones: number, tens: number) {
     light.pixels.clear()
@@ -54,5 +59,12 @@ function showtoss(ones: number, tens: number) {
     }
     light.pixels.show()
     music.stopAllSounds()
+    return
+}
+
+function prepthrow(troll: number) {
+    ones = troll % 10
+    tens = troll / 10
+    showtoss(ones, tens)
     return
 }
